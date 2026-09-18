@@ -54,6 +54,7 @@ This estimates salary based only on the relationship between VORP and salary in 
 **Salary Residual = Actual Salary - Predicted Salary**
 
 A positive residual means the player's actual salary was above the model's prediction, while a negative residual means it was below the prediction.
+
 ## Analysis & Results
 
 ### Salary vs. VORP
@@ -69,8 +70,11 @@ This means that within this model, each additional point of Combined VORP is ass
 The model had an **R² of 0.35**, meaning Combined VORP explains about 35% of the variation in salary among the qualified players in this dataset.
 
 This also shows that VORP alone does not explain most of the differences in NBA salaries. Factors that are not included in this model can also affect salary, so I use the predicted salaries and residuals as comparisons rather than estimates of what a player should actually be paid.
+
 ![2025-26 NBA Salary vs. Combined VORP](salary_vs_vorp.png)
+
 The scatterplot shows a positive relationship between VORP and salary, but there is still a lot of variation around the regression line. I also highlighted several players with large differences between their actual salary and the salary predicted by the model.
+
 ### Top 10 Players by VORP per $1M Salary
 
 I also compared players using VORP per $1M of salary to see which players produced the most VORP relative to how much they were paid.
@@ -78,6 +82,7 @@ I also compared players using VORP per $1M of salary to see which players produc
 This comparison only includes players who met the same requirements of at least 40 games played and 20 minutes per game.
 
 ![Top 10 NBA Players by VORP per $1M Salary](top_10_vorp_per_million.png)
+
 ### What Stood Out to Me
 
 A few players stood out to me when I looked at both parts of the analysis.
@@ -89,6 +94,7 @@ Victor Wembanyama stood out in the opposite direction. He recorded a Combined VO
 The VORP per $1M results also highlighted players who may not have the largest salaries or highest overall VORP totals. Collin Gillespie ranked first at 1.13 VORP per $1M, followed by Julian Champagnie at 1.03. Their relatively low salaries combined with strong VORP made them the two highest-ranked players by this measure.
 
 Looking at both charts showed me that total performance and salary efficiency tell different parts of the story. A player can have a very high VORP without ranking first in VORP per $1M, while a lower-salary player can provide strong production relative to their cost.
+
 ## Limitations
 
 There are several limitations to this analysis that are important when interpreting the results.
@@ -100,3 +106,10 @@ There are several limitations to this analysis that are important when interpret
 - Players without a matching 2025–26 salary record in the salary dataset were excluded from salary-based calculations.
 
 Because of these limitations, the salary residuals should not be interpreted as a definitive measure of whether a player is overpaid or underpaid.
+
+## Data Sources
+
+- [NBA Player Stats – 2025–26 (Kaggle)](https://www.kaggle.com/datasets/eduardopalmieri/nba-player-stats-season-2526)
+- [NBA Salary Cap & Contracts 2016–2026 (Kaggle)](https://www.kaggle.com/datasets/mrbridge/nba-salary-cap-contracts-2016-2026)
+- [2025–26 NBA Advanced Stats – Regular Season VORP (Basketball-Reference)](https://www.basketball-reference.com/leagues/NBA_2026_advanced.html)
+- [2026 NBA Playoffs Advanced Stats – Playoff VORP (Basketball-Reference)](https://www.basketball-reference.com/playoffs/NBA_2026_advanced.html)
